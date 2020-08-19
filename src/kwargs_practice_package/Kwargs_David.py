@@ -22,29 +22,3 @@ result1 = count_sevens(7, 7, 8)
 print(result1)
 print(count_sevens(*nums))
 
-# make_float, operation, message, first, second,
-def calculate(**kwargs):
-    if kwargs["operation"] == "add":
-        if kwargs["make_float"]:
-            return kwargs["message "].join(kwargs["first"]+kwargs["second"])
-        else:
-            return kwargs["The result is"].join(kwargs["first"]+kwargs["second"])
-    elif kwargs["operation"] == "subtract":
-        if kwargs["make_float"]:
-            return kwargs["message "].join(float(kwargs["first"]-kwargs["second"]))
-        else:
-            return kwargs["The result is"].join(kwargs["first"]-kwargs["second"])
-    elif kwargs["operation"] == "divide":
-        if kwargs["make_float"]:
-            return kwargs["message "].join(float(kwargs["first"]/kwargs["second"]))
-        else:
-            return kwargs["The result is"].join(kwargs["first"]/kwargs["second"])
-    elif kwargs["operation"] == "multiply":
-        if kwargs["make_float"]:
-            return kwargs["message "].join(float(kwargs["first"]*kwargs["second"]))
-        else:
-            return kwargs["The result is"].join(kwargs["first"]*kwargs["second"])
-
-
-print(calculate(make_float=False, operation='add', message='You just added', first=2, second=4))
-print(calculate(make_float=True, operation='divide', first=3.5, second=5))
